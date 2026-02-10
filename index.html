@@ -83,6 +83,50 @@ button:hover {
     box-shadow: 0 8px 20px rgba(230,57,100,0.5);
 }
 
+
+.background-anim {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+
+.rose, .bg-heart {
+    position: absolute;
+    bottom: -50px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    animation: floatUp linear infinite;
+}
+
+.rose {
+    background: url('https://i.ibb.co/vvZbF0x/rose.png') no-repeat center/contain;
+}
+
+.bg-heart {
+    background: url('https://i.ibb.co/9W4n7T0/heart.png') no-repeat center/contain;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.8) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50vh) scale(1) rotate(20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.8) rotate(-20deg);
+        opacity: 0;
+    }
+}
+
 /* PAGE 2 */
 .message-box {
     background: white;
@@ -273,8 +317,8 @@ button:hover {
             Quand je dis ça, j’ai l’impression d’être un enfant,  
             mais je suis amoureux de la superbe fille que tu es.
 
-            Tu es forte, drôle, cultivée, pleine d’amour, et j’en passe.
-
+            Tu es forte, drôle, cultivée, pleine d’amour… je pourrais même faire une liste comme Clotaire dans L’Amour Ouf !
+            
             Je le répète, mais je t’aime,  
             et je suis très heureux de passer cette Saint-Valentin avec toi.
         </div>
